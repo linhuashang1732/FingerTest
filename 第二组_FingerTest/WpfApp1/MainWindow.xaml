@@ -1,0 +1,82 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+
+
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="10*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBox Name="textBox_State" Grid.Row="0" Background="Black" Visibility="Hidden"></TextBox>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="335*"></ColumnDefinition>
+
+                        <ColumnDefinition Width="354*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Image Name="img1" Grid.Column="0" Width="280" Height="360" ></Image>
+                    <Image Name="img2" Grid.Column="1" Width="280" Height="360" ></Image>
+
+                </Grid>
+               
+            </Grid>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border Name="bor" Grid.Row="0" Grid.RowSpan="4" BorderBrush="Black" CornerRadius="5" Margin="5" BorderThickness="1"></Border>
+                <Border Grid.Row="5" Grid.RowSpan="6" BorderBrush="Black" CornerRadius="5" Margin="5" BorderThickness="1"></Border>
+
+                <Label Name="lbl" Content="登记人" FontWeight="Bold" Margin="3"></Label>
+                <StackPanel Grid.Row="1" Orientation="Horizontal" Height="32" VerticalAlignment="Top">
+                    <Label Name="lbl1" Content="姓名" Margin="2"></Label>
+                    <TextBox x:Name="textBox_Name"  Width="66" Margin="0,5,10,5"/>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Orientation="Horizontal" Height="32" VerticalAlignment="Top">
+                    <Label Name="lbl2" Content="学号" Margin="2"></Label>
+                    <TextBox x:Name="textBox_Sno"  Width="66" Margin="0,5,10,5"/>
+                </StackPanel>
+                <StackPanel Grid.Row="3" Orientation="Horizontal" Height="32" VerticalAlignment="Top">
+                    <Label Name="lbl3" Content="年级" Margin="2"></Label>
+                    <TextBox x:Name="textBox_Grade"  Width="66" Margin="0,5,10,5"/>
+                </StackPanel>
+                <Label Grid.Row="5" Margin="8" Content="指纹采集器" FontWeight="Bold"></Label>
+                <Button Grid.Row="6" Margin="8" Content="启动" Name="btn_Op3" Click="btn_OpClick"></Button>
+                <Button Grid.Row="7" Margin="8" Content="保存为图片" Name="btn_Op4" Click="btn_OpClick"></Button>
+                <Button Grid.Row="8" Margin="8" Content="指纹登记" Name="btn_Op5" Click="btn_OpClick"></Button>
+                <Button Grid.Row="9" Margin="8" Content="指纹识别" Name="btn_Op6" Click="btn_OpClick"></Button>
+                <Button Grid.Row="10" Margin="8" Content="停止" Name="btn_Op7" Click="btn_OpClick"></Button>
+
+                <Button Grid.Row="12" Margin="8,8,8,0" Content="退出" Name="btn_Op9" Click="btn_OpClick" Height="24" VerticalAlignment="Top"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
